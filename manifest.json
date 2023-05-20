@@ -1,0 +1,21 @@
+{
+  "name": "Moodle Drawer Fix",
+  "description": "Fixes the moodle drawer by replacing the codes with the full course names. Thanks to Davide Pizzolato for the idea",
+  "author": "leonebacciu@gmail.com",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://moodle.unive.it/*"],
+      "js": ["jquery-3.7.0.min.js","content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [{
+    "resources": ["mdf-bridge.js"],
+    "matches": ["<all_urls>"]
+  }],
+
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+}
