@@ -6,16 +6,30 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["https://moodle.unive.it/*"],
-      "js": ["jquery-3.7.0.min.js","content-script.js"],
+      "matches": [
+        "https://moodle.unive.it/*"
+      ],
+      "js": [
+        "jquery-3.7.0.min.js",
+        "content-script.js"
+      ],
       "run_at": "document_idle"
     }
   ],
-
-  "web_accessible_resources": [{
-    "resources": ["mdf-bridge.js"],
-    "matches": ["<all_urls>"]
-  }],
-
-  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "mdf-bridge.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ]
 }
