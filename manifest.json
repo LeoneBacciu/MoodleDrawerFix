@@ -1,6 +1,6 @@
 {
   "name": "Moodle Drawer Fix",
-  "description": "Fixes the moodle drawer by replacing the codes with the full course names. Thanks to Davide Pizzolato for the idea",
+  "description": "Fixes the moodle drawer by replacing the course id with the full name. (Thanks to Davide Pizzolato for the initial implementation)",
   "author": "leonebacciu@gmail.com",
   "version": "1.0",
   "manifest_version": 3,
@@ -25,11 +25,5 @@
         "<all_urls>"
       ]
     }
-  ],
-  "permissions": [
-    "storage",
-    "activeTab",
-    "scripting",
-    "tabs"
   ]
 }
