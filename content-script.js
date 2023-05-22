@@ -24,7 +24,7 @@ $(function () {
         }))[0].data.courses  // Trust me, it's there
 
         // Finds all tiles that link to a course and replaces the text content
-        const rename = data => data.forEach(c => $(`a[href="https://moodle.unive.it/course/view.php?id=${c.id}"] .media-body`).text(c.fullname))
+        const rename = data => data.forEach(c => $(`option[value="${c.id}"]`).text(c.fullname))
 
         // Fetches the courses and replaces the names
         const run = async sesskey => rename((await Promise.all([
